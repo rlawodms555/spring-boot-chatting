@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.chat.dao.UserDao">
+	<insert id="insertUser" parameterType="User">
+		insert into chatting_user (user_no, user_name, user_created_date)
+		values (chatting_user_seq.nextval, #{name}, sysdate)
+	</insert>
+</mapper>

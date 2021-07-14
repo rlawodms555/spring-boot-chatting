@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.chat.dao.MsgDao">
+	<insert id="insertMsg" parameterType="msg">
+		insert into chatting_msg (msg_no, user_no, room_no, msg_content, msg_created_date)
+		values (chatting_msg_seq.nextval, #{userNo}, #{roomNo}, #{content}, sysdate)
+	</insert>
+</mapper>

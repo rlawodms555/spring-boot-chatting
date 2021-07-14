@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.chat.dao.RoomDao">
+	<insert id="insertRoom" parameterType="Room">
+		insert into chatting_room (room_no, user_no, room_name, room_created_date)
+		values (chatting_room_seq.nextval, #{userNo}, #{roomName}, sysdate)
+	</insert>
+
+</mapper>
